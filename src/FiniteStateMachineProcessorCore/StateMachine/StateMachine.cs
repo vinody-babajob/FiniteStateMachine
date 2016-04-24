@@ -1,21 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+using FiniteStateMachineProcessorCore.StateMachine.Flow;
+using FiniteStateMachineProcessorCore.StateMachine.User;
 
 namespace FiniteStateMachineProcessorCore.StateMachine
 {
     public class StateMachine
     {
-        public List<State> States { get; set; }
-        public Dictionary<string, ProcessEventConfig> ProcessEvents { get; set; }
-        public Dictionary<string, StateMachineAction> Actions { get; set; } 
-        public Dictionary<string, dynamic> Constants { get; set; }
-        public State currentState;
-        public List<State> stateflow;
-        public State prevState;
+        // this system defined config for state machine
+        public readonly FlowContext flowContext;
 
-        public StateMachine()
+        // this will give current state of user
+        public UserContext userContext;
+
+        public static void Intialize()
         {
-            stateflow = new List<State>();
+            
         }
 
         public StateMachineEventResult TriggerEvent(string eventName)

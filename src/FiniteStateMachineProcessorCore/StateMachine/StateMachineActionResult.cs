@@ -6,5 +6,6 @@
         public string statuscode;
         public string errormessage;
         public bool isSuccessful;
+        public string actionName;
     }
 }

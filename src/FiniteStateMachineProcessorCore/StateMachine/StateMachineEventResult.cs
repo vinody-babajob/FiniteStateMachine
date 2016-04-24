@@ -7,5 +7,6 @@ namespace FiniteStateMachineProcessorCore.StateMachine
         public List<StateMachineActionResult> actionResults;
         public bool isSuccessful;
         public dynamic result;
+        public string eventName;
     }
 }
